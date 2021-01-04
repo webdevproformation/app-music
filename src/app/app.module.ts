@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { SearchComponent } from './search/search.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { AlbumComponent } from './album/album.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,18 @@ import { SearchFormComponent } from './search-form/search-form.component';
     HomeComponent,
     ConnexionComponent,
     SearchComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    AlbumComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule ,
     RouterModule.forRoot([
       {path : "" , component: HomeComponent },
       {path : "connexion" , component: ConnexionComponent},
-      {path : "search/:key" , component:SearchComponent}
+      {path : "search/:key" , component:SearchComponent},
+      {path : "album/:id" , component : AlbumComponent },
+      {path : "**" , component: NotFoundComponent }
     ]),
     FormsModule
   ],

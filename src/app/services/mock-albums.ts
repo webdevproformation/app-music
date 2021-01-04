@@ -6,7 +6,7 @@ export const ALBUMS: Album[] = [
         "ref": "Hard Rock",
         "name": "Kirby Ortega",
         "title": "pariatur nulla",
-        "description": "Voluptate mollit consectetur pariatur labore. Quis amet quis minim nulla voluptate amet nisi. Ut sint veniam magna aute velit minim laborum eiusmod mollit dolor laborum. Minim Lorem Lorem pariatur adipisicing laborum tempor consequat est officia proident. Qui consequat duis ipsum minim Lorem cillum in excepteur.\r\n",
+        "description": "Voluptate mollit consectetur pariatur labore. Quis amet quis minim nulla voluptate amet nisi. Ut sint veniam magna aute velit minim laborum eiusmod mollit dolor laborum. Minim Lorem Lorem pariatur adipisicing laborum tempor album consequat est officia proident. Qui consequat duis ipsum minim Lorem cillum in excepteur.\r\n",
         "duration": 215,
         "url": "http://placehold.it/800x800?text=pariatur nulla",
         "like": "Much",

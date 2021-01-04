@@ -21,8 +21,13 @@ export class MusicService {
 
   search<T>( motRecherche :string ){
     let resultat = [];
+    let motRechercheMinuscule = motRecherche.toLocaleLowerCase();
     ALBUMS.forEach( function( item ){
-      if( item.name.indexOf( motRecherche ) !== -1  || item.title.indexOf( motRecherche ) !== -1 || item.description.indexOf( motRecherche ) !== -1 ){
+      if( 
+          item.name.toLocaleLowerCase().indexOf( motRechercheMinuscule ) !== -1  || 
+          item.title.toLocaleLowerCase().indexOf( motRechercheMinuscule ) !== -1 || 
+          item.description.toLocaleLowerCase().indexOf( motRechercheMinuscule ) !== -1 )
+      {
         resultat.push(item);
       }
     } );
