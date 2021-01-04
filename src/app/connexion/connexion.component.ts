@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-connexion',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _route : Router ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(f){
     console.log(f.value);
+    this._route.navigate(["/admin"]);
   }
 
 }

@@ -9,11 +9,8 @@ import { Album } from "../services/album";
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
   albums : Array<Album>;
-
   constructor( private _activeRoute : ActivatedRoute , private _music : MusicService  ) { }
-
   ngOnInit(): void {
     // observable : this._activeRoute.paramMap
     // il faut s'abonner à l'observable via la méthode .subscribe( callback )

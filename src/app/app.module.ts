@@ -15,6 +15,7 @@ import { SearchComponent } from './search/search.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { AlbumComponent } from './album/album.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SearchComponent,
     SearchFormComponent,
     AlbumComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule ,
@@ -38,6 +40,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       {path : "connexion" , component: ConnexionComponent},
       {path : "search/:key" , component:SearchComponent},
       {path : "album/:id" , component : AlbumComponent },
+      {path : "admin" , component : DashboardComponent },
       {path : "**" , component: NotFoundComponent }
     ]),
     FormsModule
