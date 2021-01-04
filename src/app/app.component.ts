@@ -7,11 +7,4 @@ import { Component  } from '@angular/core';
 })
 export class AppComponent {
   title :string = 'app-music';
-  
-  albumEncours : string = "1";
-
-  updateAlbumEncours ($event){
-      this.albumEncours = $event;
-  }
-
 }

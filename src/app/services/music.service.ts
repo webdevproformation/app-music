@@ -19,8 +19,18 @@ export class MusicService {
     } );
   }
 
+  search<T>( motRecherche :string ){
+    let resultat = [];
+    ALBUMS.forEach( function( item ){
+      if( item.name.indexOf( motRecherche ) !== -1  || item.title.indexOf( motRecherche ) !== -1 || item.description.indexOf( motRecherche ) !== -1 ){
+        resultat.push(item);
+      }
+    } );
+    return resultat ;
+  }
+
   findAlbumComplet<T>(id: string){
-    let album = this.find( id); 
+    let album = this.find( id ); 
     let albumComplet = {
       album : album,
       titres : []

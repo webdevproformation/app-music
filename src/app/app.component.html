@@ -1,18 +1,11 @@
 <div class="container-fuild principal">
    <app-menu [title]="title"></app-menu>
-   <div class="row content">
-       <div class="col-sm-4 video">
-          <app-sidebar [albumAAfficher]="albumEncours"></app-sidebar>
-       </div><!-- .video -->
-       <div class="col-sm-8 music">
-            <app-pagination></app-pagination>
-
-            <button type="button" class="btn btn-lg btn-danger">You are in an anonymous mode.</button>
-
-            <app-albums (change)="updateAlbumEncours($event)" ></app-albums>
-           
-           <app-pagination></app-pagination>
-       </div><!-- .music -->
-   </div>
+   <router-outlet></router-outlet>
+   <!-- cette balise va être en charge de 
+      vient du Module RouterModule de angular 
+      en fonction de l'adresse <=> le composant concerné 
+      http://localhost:4200   => home.component.ts 
+      http://localhost:4200/connexion   => connexion.component.ts 
+   -->
 </div>
 

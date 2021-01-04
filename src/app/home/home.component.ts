@@ -12,4 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  albumEncours : string = "1";
+
+  updateAlbumEncours ($event){
+      this.albumEncours = $event;
+  }
+
 }

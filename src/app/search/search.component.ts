@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { MusicService } from "../services/music.service";
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _activeRoute : ActivatedRoute , private _music : MusicService  ) { }
 
   ngOnInit(): void {
+    // observable : this._activeRoute.paramMap
+    // il faut s'abonner à l'observable via la méthode .subscribe( callback )
+    this._activeRoute.paramMap.subscribe( ( reponse ) => { 
+      let motRecherche = reponse.get("key");
+      console.log(motRecherche);
+      let resultat = this._music.search( motRecherche ); // [] // [{},{}]
+      console.log( resultat );
+    } );
   }
 
 }
