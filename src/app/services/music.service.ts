@@ -18,6 +18,26 @@ export class MusicService {
     // la méthode add est finie
   }
 
+  update( data ){
+    let albumAUpdate = this.data.find(  function( item ){
+      return item.id === data.id;
+    } );
+    let index = this.data.indexOf( albumAUpdate );
+    if(index !== -1 ){
+       // effectue la mise à jour 
+      this.data[index] = data ;
+    }
+  }
+
+  delete( id: string ){
+    let albumASupprimer = this.data.find( (item) => item.id === id );
+    let index = this.data.indexOf( albumASupprimer );
+    // [1, 2,3].indexOf(3) // 2
+    // [1, 2,3].indexOf(99) // -1
+    if( index !== -1 ){
+      this.data.splice( index , 1 );
+    }
+  }
 
   getAll<T>() : Array<Album>{
     return this.data;

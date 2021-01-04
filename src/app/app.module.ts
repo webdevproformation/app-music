@@ -17,6 +17,7 @@ import { AlbumComponent } from './album/album.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AddComponent } from './admin/album/add/add.component';
+import { UpdateComponent } from './admin/album/update/update.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AddComponent } from './admin/album/add/add.component';
     AlbumComponent,
     NotFoundComponent,
     DashboardComponent,
-    AddComponent
+    AddComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule ,
@@ -42,6 +44,7 @@ import { AddComponent } from './admin/album/add/add.component';
       {path : "connexion" , component: ConnexionComponent},
       {path : "search/:key" , component:SearchComponent},
       {path : "album/:id" , component : AlbumComponent },
+      {path : "admin/album/update/:id" , component : UpdateComponent },
       {path : "admin/album/add" , component : AddComponent },
       {path : "admin" , component : DashboardComponent },
       {path : "**" , component: NotFoundComponent }

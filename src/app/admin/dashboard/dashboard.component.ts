@@ -15,4 +15,8 @@ export class DashboardComponent implements OnInit {
     this.albums = this._music.getAll();
   }
 
+  onClickDelete(id : string){
+    this._music.delete( id )
+  }
+
 }

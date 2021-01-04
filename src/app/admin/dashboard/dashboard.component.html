@@ -21,6 +21,8 @@
                     <th>id</th>
                     <th>nom</th>
                     <th>ref</th>
+                    <th>update</th>
+                    <th>delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +30,15 @@
                     <td>{{ album.id }}</td>
                     <td>{{ album.name }}</td>
                     <td>{{ album.ref }}</td>
+                    <td>
+                        <a [routerLink]="['/admin/album/update' , album.id ]" class="btn btn-outline-warning">update</a>
+                    </td>
+                    <td>
+                        <button (click)="onClickDelete(album.id)"
+                        class="btn btn-outline-danger">
+                            delete
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>
