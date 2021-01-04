@@ -6,12 +6,12 @@
     <p class="card-text">{{ album.description }}</p>
     <a class="btn btn-outline-primary mr-2 btn-sm" href="#" role="button"
     *ngFor="let tag of album.tags">{{ tag }}</a>
-    <a 
+   <!--  <a 
         class="btn btn-outline-dark btn-sm mr-3" 
         href="#" role="button"
         (click)="onClickShowAlbum( $event, album.id )">
         guitar
-    </a>
+    </a> -->
     <img class="glyph-icon" src="./assets/svg/si-glyph-heart.svg" />
     <small>7</small>
     <img class="glyph-icon" src="./assets/svg/si-glyph-timer-2.svg" />

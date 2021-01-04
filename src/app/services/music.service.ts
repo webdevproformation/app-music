@@ -7,10 +7,20 @@ import { Album } from "./album";
 })
 export class MusicService {
 
-  constructor() { }
+  data :Array<any> ; 
+
+  constructor() {
+    this.data = ALBUMS;
+  }
+
+  add( data ){
+    this.data.unshift( data );
+    // la méthode add est finie
+  }
+
 
   getAll<T>() : Array<Album>{
-    return ALBUMS;
+    return this.data;
   }
 
   find<T>( id:string ){

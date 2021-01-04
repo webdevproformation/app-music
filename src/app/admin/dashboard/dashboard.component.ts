@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Album } from '../../services/album';
+import { MusicService } from "../../services/music.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  albums : Array<Album>
+  constructor( private _music : MusicService) { }
 
   ngOnInit(): void {
+    this.albums = this._music.getAll();
   }
 
 }
